@@ -6,7 +6,7 @@
 
 @import url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/retro-terminal/retro-terminal-base.css);
 :root {
---main-bg-color:black;
+--main-bg-color:url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/fallout/wallpaper/rocky-wall.png), url(http://192.168.10.186:6543/mgoblin_media/media_entries/3/sombra-overwatch-po-1680x1050.jpg) center center/cover no-repeat fixed;
 --body-before:#70d7f61a;
 --body-after: #70d7f633;
 --body-animation: flicker;
