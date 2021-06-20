@@ -1,7 +1,7 @@
 #!/bin/bash
 TYPE="retro-terminal"
 THEME="green.css"
-DOMAIN="gilbn.github.io"
+DOMAIN="pherisw.github.io"
 ADD_JS="true"
 JS="custom_text_header.js"
 DISABLE_THEME="false"
@@ -15,14 +15,14 @@ DISABLE_THEME = ${DISABLE_THEME}\\n"
 
 # Restore login.php
 if [ ${DISABLE_THEME} = "true" ]; then
-  echo "Restoring backup of login.php" 
+  echo "Restoring backup of login.php"
   cp -p /usr/local/emhttp/login.php.backup /usr/local/emhttp/login.php
   exit 0
 fi
 
 # Backup login page if needed.
 if [ ! -f /usr/local/emhttp/login.php.backup ]; then
-  echo "Creating backup of login.php" 
+  echo "Creating backup of login.php"
   cp -p /usr/local/emhttp/login.php /usr/local/emhttp/login.php.backup
 fi
 
@@ -53,7 +53,7 @@ fi
 
 # Changing stylesheet
 if ! grep -q ${TYPE}"/"${THEME} /usr/local/emhttp/login.php; then
-  echo "Changing existing custom stylesheet.." 
+  echo "Changing existing custom stylesheet.."
   sed -i "/<link rel='stylesheet' href='https:\/\/${DOMAIN}\/theme.park\/CSS\/addons\/unraid\/login-page/c <link rel='stylesheet' href='https://${DOMAIN}/theme.park/CSS/addons/unraid/login-page/${TYPE}/${THEME}'>" /usr/local/emhttp/login.php
   echo 'Stylesheet set to' ${THEME}
 fi
